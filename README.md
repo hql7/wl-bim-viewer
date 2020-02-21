@@ -8,19 +8,20 @@
 ## [在线访问](https://hql7.github.io/) 
 
 ## 快速上手
-`npm i wl-cad-viewer -S`
+`npm i wl-bim-viewer -S`
 
 ```
-import wlCadViewer from "wl-cad-viewer";`
-Vue.use(wlCadViewer);
+import wlBimViewer from "wl-bim-viewer";`
+import "wl-bim-viewer/lib/wl-bim-viewer.css"
+Vue.use(wlBimViewer);
 ```
 
 ```
-<wl-viewer 
+<wl-bim-viewer 
     multiple 
     :docs="bims" 
     class="wl-viewer">
-</wl-viewer>
+</wl-bim-viewer>
 ```
 ## 文档
 

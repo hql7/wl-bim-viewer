@@ -15,7 +15,7 @@
 // const $ = require("jquery.min.js");
 
 export default {
-  name: "wlCadViewer",
+  name: "wlBimViewer",
   components: {
     scriptLink: {
       render(createElement) {

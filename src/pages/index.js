@@ -1,6 +1,6 @@
-import wlCadViewer from "./cad-viewer/";
+import wlBimViewer from "./cad-viewer/";
 
-const components = [wlCadViewer];
+const components = [wlBimViewer];
 
 const install = function (Vue) {
   components.forEach(component => {
@@ -14,5 +14,5 @@ if (typeof window !== "undefined" && window.Vue) {
 
 export default {
   install,
-  wlCadViewer,
+  wlBimViewer,
 };

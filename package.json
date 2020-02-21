@@ -1,20 +1,20 @@
 {
-  "name": "wl-cad-viewer",
-  "version": "0.1.0",
+  "name": "wl-bim-viewer",
+  "version": "0.1.1",
   "private": false,
   "author": "weilan<https://github.com/hql7>",
   "license": "Apache License",
-  "main": "lib/wl-cad-viewer.common.js",
+  "main": "lib/wl-bim-viewer.common.js",
   "bugs": {
-    "url": "https://github.com/hql7/wl-cad-viewer/issues"
+    "url": "https://github.com/hql7/wl-bim-viewer/issues"
   },
-  "homepage": "https://github.com/hql7/wl-cad-viewer/#readme",
+  "homepage": "https://github.com/hql7/wl-bim-viewer/#readme",
   "keyword": "bim BIM cad CAD viewer bim-viewer cad-viewer autodesk forge viewer vue 浏览器预览cad",
   "description": "Cad preview plugin for vue framework. 用于vue框架的cad预览插件",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lib": "vue-cli-service build --target lib --name wl-cad-viewer --dest lib ./src/pages/index.js",
+    "lib": "vue-cli-service build --target lib --name wl-bim-viewer --dest lib ./src/pages/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

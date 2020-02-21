@@ -1,7 +1,7 @@
-import wlCadViewer from "./index.vue";
+import wlBimViewer from "./index.vue";
 
-wlCadViewer.install = function(Vue) {
-  Vue.component(wlCadViewer.name, wlCadViewer);
+wlBimViewer.install = function(Vue) {
+  Vue.component(wlBimViewer.name, wlBimViewer);
 };
 
-export default wlCadViewer;
+export default wlBimViewer;
