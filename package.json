@@ -1,0 +1,57 @@
+{
+  "name": "wl-cad-viewer",
+  "version": "0.1.0",
+  "private": false,
+  "author": "weilan<https://github.com/hql7>",
+  "license": "Apache License",
+  "main": "lib/wl-cad-viewer.common.js",
+  "bugs": {
+    "url": "https://github.com/hql7/wl-cad-viewer/issues"
+  },
+  "homepage": "https://github.com/hql7/wl-cad-viewer/#readme",
+  "keyword": "bim BIM cad CAD viewer bim-viewer cad-viewer autodesk forge viewer vue 浏览器预览cad",
+  "description": "Cad preview plugin for vue framework. 用于vue框架的cad预览插件",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lib": "vue-cli-service build --target lib --name wl-cad-viewer --dest lib ./src/pages/index.js",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "core-js": "^3.6.4",
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.2.0",
+    "@vue/cli-plugin-eslint": "~4.2.0",
+    "@vue/cli-service": "~4.2.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.1.2",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.2",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+git@github.com:hql7/wl-cad-viewer.git"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}

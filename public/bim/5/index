@@ -1,0 +1,9 @@
+#!/bin/bash
+
+FORGEBUILD="`dirname \"$0\"`" # Relative
+export FORGEBUILD="`( cd \"$FORGEBUILD\" && pwd )`" # Absolutized and normalized
+pushd $FORGEBUILD
+
+# Figure out the node version.
+open http://localhost:8080/index.html
+http-server .
