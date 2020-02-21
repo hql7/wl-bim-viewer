@@ -1,4 +1,4 @@
-# wl-cad-viewer
+# wl-bim-viewer
 
 一个用于在浏览器上展示bim模型的vue插件，可以预览转化后的CAD文件。       
 基于vue和autodesk forge viewer写成。        
