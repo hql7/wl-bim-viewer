@@ -5,7 +5,7 @@
     <!-- 注入外部Viewer3Djs -->
     <scriptLink></scriptLink>
     <!-- 模型区 -->
-    <div id="wl-viewer-box" class="wl-viewer-box"></div>
+    <div id="wl-viewer-box" class="wl-viewer-box" v-loading="init"></div>
     <!-- 自定义区 -->
     <slot></slot>
   </div>
@@ -58,7 +58,9 @@ export default {
       db: {}, // 记录模型数据
       load_options: {}, // 模型加载配置项
       index: null, // 在加载过程中的当前模型索引
-      select_info: [] // 选中构建信息
+      select_info: [], // 选中构建信息
+      timer: null,
+      init: false
     };
   },
   computed: {
@@ -76,16 +78,21 @@ export default {
     }
   },
   mounted() {
-    // 为保证scriptLink、cssLink加载完毕 延迟初始化时间
-    setTimeout(() => {
-      let mat = new window.THREE.Matrix4();
-      this.load_options = {
-        placementTransform: mat
-      };
-      this.initViewer();
-    }, 300);
+    this.init = true;
+    this.timer = setInterval(() => {
+      if (window.THREE && window.THREE.Matrix4) {
+        clearInterval(this.timer);
+        let mat = new window.THREE.Matrix4();
+        this.load_options = {
+          placementTransform: mat
+        };
+        this.initViewer();
+      }
+    }, 500);
   },
   beforeDestroy() {
+    clearInterval(this.timer);
+    this.timer = null;
     this.uploadViewer();
   },
   methods: {
@@ -258,10 +265,12 @@ export default {
 
           //map this item with the corresponding model in case of use
           self.modelArray[index].modelObj = model;
+          self.init = false;
         }
 
         // model渲染完毕回调
         function _onGeometryLoaded(evt) {
+          self.init = false;
           /* if ([4, 5].includes(index)) {
             self.drawPushpin(2, evt.model);
           }
@@ -310,6 +319,7 @@ export default {
             modelName + ": Load Model Error, errorCode:" + viewerErrorCode
           );
           self.$emit("error", modelName, viewerErrorCode);
+          self.init = false;
           //any error
           reject(modelName + " Loading Failed!" + viewerErrorCode);
           // 加载失败回调结束
@@ -356,11 +366,11 @@ export default {
       window.Autodesk.Viewing.shutdown();
     },
     // 获取模型信息
-    getModelInfo(){
+    getModelInfo() {
       return {
         viewer: this.viewer,
         models: this.db
-      }
+      };
     }
   }
 };
