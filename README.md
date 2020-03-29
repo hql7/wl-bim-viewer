@@ -1,11 +1,11 @@
 # wl-bim-viewer
 
-一个用于在浏览器上展示bim模型的vue插件，可以预览转化后的CAD文件。       
+一个用于在浏览器上展示bim模型的vue插件，可以预览转化后的BIM、CAD文件。       
 基于vue和autodesk forge viewer写成。        
 目前支持单模型加载及多模型顺序加载。        
 其他特性正在扩展中。
 
-## [在线访问](https://hql7.github.io/) 
+## [在线访问](http://wlui.com.cn/ui/bim) 
 
 ## 快速上手
 `npm i wl-bim-viewer -S`
@@ -65,7 +65,8 @@ Vue.use(wlBimViewer);
 | ---- | ---- | ---- |
 | 1 | - | 位于模型dom下的自定义dom区 | 
 
-
+### 版本记录
+> 1.0.0 因国外cdn时间波动太大，将js依赖本地化，并优化初始化事件防止init错误
 
 ## Project setup
 ```

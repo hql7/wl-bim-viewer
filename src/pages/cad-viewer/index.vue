@@ -1,19 +1,19 @@
 <template>
-  <div class="wl-cad-viewer">
+  <div class="wl-bim-viewer">
     <!-- 注入外部Viewer3Dcss -->
     <cssLink></cssLink>
     <!-- 注入外部Viewer3Djs -->
     <scriptLink></scriptLink>
     <!-- 模型区 -->
-    <div id="wl-viewer-box" class="wl-viewer-box" v-loading="init"></div>
+    <div id="wl-viewer-box" class="wl-viewer-box">
+      <div class="wl-viewer-loading" v-if="init"></div>
+    </div>
     <!-- 自定义区 -->
     <slot></slot>
   </div>
 </template>
 
 <script>
-// const $ = require("jquery.min.js");
-
 export default {
   name: "wlBimViewer",
   components: {
@@ -23,7 +23,8 @@ export default {
           attrs: {
             type: "text/javascript",
             src:
-              "https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.min.js"
+              // "https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.min.js"
+              "/static/viewer3D.min.js"
           }
         });
       }
@@ -35,7 +36,8 @@ export default {
             type: "text/css",
             rel: "stylesheet",
             href:
-              "https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.min.css"
+              // "https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.min.css"
+              "/static/style.min.css"
           }
         });
       }
@@ -88,11 +90,12 @@ export default {
         };
         this.initViewer();
       }
-    }, 500);
+    }, 1000);
   },
   beforeDestroy() {
     clearInterval(this.timer);
     this.timer = null;
+    this.init = false;
     this.uploadViewer();
   },
   methods: {
@@ -381,5 +384,16 @@ export default {
   position: relative;
   width: 100%;
   height: 100%;
+
+  .wl-viewer-loading {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+    background: url("../../assets/images/loading.gif") center no-repeat;
+    background-color: #fff;
+  }
 }
 </style>
