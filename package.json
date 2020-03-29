@@ -10,7 +10,7 @@
   },
   "homepage": "https://github.com/hql7/wl-bim-viewer/#readme",
   "keyword": "bim BIM cad CAD viewer bim-viewer cad-viewer autodesk forge viewer vue 浏览器预览cad",
-  "description": "Cad preview plugin for vue framework. 用于vue框架的cad预览插件",
+  "description": "BIM preview plugin for vue framework. 用于vue框架的BIM预览插件",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
