@@ -8,49 +8,49 @@
       <a href="https://juejin.im/user/591d141e0ce46300692184a4">掘金</a>
     </div>
     <!-- viewer区 -->
-    <wl-viewer multiple :docs="bims" class="wl-viewer"></wl-viewer>
+    <wl-bim-viewer multiple :docs="bims" class="wl-viewer"></wl-bim-viewer>
   </div>
 </template>
 
 <script>
-import wlViewer from "@/pages/cad-viewer";
+// import WlBimViewer from "@/pages/cad-viewer";
 
 export default {
   name: "App",
   components: {
-    wlViewer
+    // WlBimViewer
   },
   data() {
     return {
       bims: [
         {
           name: "urn_model1",
-          path: "/data/1/0.svf",
+          path: "data/1/0.svf",
           modelObj: null
         },
         {
           name: "urn_model2",
-          path: "/data/2/0.svf",
+          path: "data/2/0.svf",
           modelObj: null
         },
         {
           name: "urn_model3",
-          path: "/data/3/0.svf",
+          path: "data/3/0.svf",
           modelObj: null
         },
         {
           name: "urn_model4",
-          path: "/data/4/0.svf",
+          path: "data/4/0.svf",
           modelObj: null
         },
         {
           name: "urn_model5",
-          path: "/data/6/Sphere.svf",
+          path: "data/6/Sphere.svf",
           modelObj: null
         },
         {
           name: "urn_model6",
-          path: "/data/6/Sphere.svf",
+          path: "data/6/Sphere.svf",
           modelObj: null
         }
       ]
