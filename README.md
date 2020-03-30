@@ -5,7 +5,7 @@
 目前支持单模型加载及多模型顺序加载。        
 其他特性正在扩展中。
 
-传送门：[autodesk forge viewer文档](https://forge.autodesk.com/en/docs/viewer/v7/reference/Viewing/)
+传送门：[Github](https://github.com/hql7/wl-bim-viewer)      &        [autodesk forge viewer文档](https://forge.autodesk.com/en/docs/viewer/v7/reference/Viewing/)
 
 ## [在线访问](http://wlui.com.cn/ui/bim) 
 
