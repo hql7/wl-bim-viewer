@@ -1,10 +1,10 @@
 {
   "name": "wl-bim-viewer",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": false,
   "author": "weilan<https://github.com/hql7>",
   "license": "Apache License",
-  "main": "lib/wl-bim-viewer.common.js",
+  "main": "lib/wl-bim-viewer.umd.min.js",
   "bugs": {
     "url": "https://github.com/hql7/wl-bim-viewer/issues"
   },
@@ -48,7 +48,9 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+      "no-unused-vars": 0
+    }
   },
   "browserslist": [
     "> 1%",

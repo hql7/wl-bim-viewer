@@ -24,7 +24,7 @@ export default {
             type: "text/javascript",
             src:
               // "https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.min.js"
-              "/static/viewer3D.min.js"
+              "http://wlui.oss-cn-beijing.aliyuncs.com/viewer3D.min.js"
           }
         });
       }
@@ -37,7 +37,7 @@ export default {
             rel: "stylesheet",
             href:
               // "https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.min.css"
-              "/static/style.min.css"
+              "http://wlui.oss-cn-beijing.aliyuncs.com/style.min.css"
           }
         });
       }

@@ -23,6 +23,10 @@ Vue.use(wlBimViewer);
     class="wl-viewer">
 </wl-bim-viewer>
 ```
+
+### 重要更新
+> 1.1.0 减少组件包体积，将js依赖cdn；请勿使用低于1.1.0版本
+
 ## 文档
 
 ### Attributes
@@ -66,6 +70,8 @@ Vue.use(wlBimViewer);
 | 1 | - | 位于模型dom下的自定义dom区 | 
 
 ### 版本记录
+> 1.1.0 减少组件包体积，将js依赖cdn
+
 > 1.0.0 因国外cdn时间波动太大，将js依赖本地化，并优化初始化事件防止init错误
 
 ## Project setup
