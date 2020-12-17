@@ -13,49 +13,49 @@
 </template>
 
 <script>
-// import WlBimViewer from "@/pages/cad-viewer";
+import WlBimViewer from "@/pages/bim-viewer";
 
 export default {
   name: "App",
   components: {
-    // WlBimViewer
+    WlBimViewer,
   },
   data() {
     return {
       bims: [
         {
           name: "urn_model1",
-          path: "data/1/0.svf",
-          modelObj: null
+          path: "http://wlui.oss-cn-beijing.aliyuncs.com/bimdata/demo1/0.svf",
+          modelObj: null,
         },
         {
           name: "urn_model2",
-          path: "data/2/0.svf",
-          modelObj: null
+          path: "http://wlui.oss-cn-beijing.aliyuncs.com/bimdata/demo2/0.svf",
+          modelObj: null,
         },
         {
           name: "urn_model3",
-          path: "data/3/0.svf",
-          modelObj: null
+          path: "http://wlui.oss-cn-beijing.aliyuncs.com/bimdata/demo3/0.svf",
+          modelObj: null,
         },
         {
           name: "urn_model4",
-          path: "data/4/0.svf",
-          modelObj: null
+          path: "http://wlui.oss-cn-beijing.aliyuncs.com/bimdata/demo4/0.svf",
+          modelObj: null,
         },
         {
           name: "urn_model5",
-          path: "data/6/Sphere.svf",
-          modelObj: null
+          path: "http://wlui.oss-cn-beijing.aliyuncs.com/bimdata/demo5/Sphere.svf",
+          modelObj: null,
         },
         {
           name: "urn_model6",
-          path: "data/6/Sphere.svf",
-          modelObj: null
-        }
-      ]
+          path: "http://wlui.oss-cn-beijing.aliyuncs.com/bimdata/demo5/Sphere.svf",
+          modelObj: null,
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 

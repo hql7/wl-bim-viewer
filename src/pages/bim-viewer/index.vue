@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: "wlBimViewer",
+  name: "WlBimViewer",
   components: {
     scriptLink: {
       render(createElement) {
