@@ -37,6 +37,7 @@ Vue.use(wlBimViewer);
 | 1 | docs | 模型数据数组，元素为对象且至少需要一个path字段（模型文件路径，可配置） | Array | - |
 | 2 | props | 配置项,详见下 | Object | - |
 | 3 | multiple | 是否开启多模型顺序加载 | Boolean | false |
+| 4 | changeClean | 是否开启当docs变化，清理之前的模型然后重新加载新模型 | Boolean | false |
 
 ### props
 | 序号 | 参数 | 说明 | 默认字段 | 字段值类型 |

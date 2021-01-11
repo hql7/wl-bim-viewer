@@ -6,6 +6,7 @@
       <img alt="Vue logo" class="a-img" src="./assets/logo.png" />
       <a href="https://segmentfault.com/u/weilan_595deafa69d76">Segmentfault</a>&nbsp;
       <a href="https://juejin.im/user/591d141e0ce46300692184a4">掘金</a>
+      <div class="u-btn" @click="changeModel">改变模型数据</div>
     </div>
     <!-- viewer区 -->
     <wl-bim-viewer multiple :docs="bims" class="wl-viewer"></wl-bim-viewer>
@@ -33,6 +34,8 @@ export default {
           path: "http://wlui.oss-cn-beijing.aliyuncs.com/bimdata/demo2/0.svf",
           modelObj: null,
         },
+      ],
+      bimsNext: [
         {
           name: "urn_model3",
           path: "http://wlui.oss-cn-beijing.aliyuncs.com/bimdata/demo3/0.svf",
@@ -55,6 +58,11 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    changeModel() {
+      this.bims = this.bimsNext;
+    },
   },
 };
 </script>
@@ -83,6 +91,16 @@ body {
 
   > .a-img {
     height: 100%;
+  }
+  .u-btn {
+    display: inline-block;
+    margin-left: 15px;
+    padding: 4px 12px;
+    border: 1px solid crimson;
+    background: coral;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
   }
 }
 

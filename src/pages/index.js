@@ -1,4 +1,4 @@
-import wlBimViewer from "./cad-viewer/";
+import wlBimViewer from "./bim-viewer/";
 
 const components = [wlBimViewer];
 
